@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservice-seatea-order-service-2001" />
+        <module name="microservice-alibaba-sentinel-service-8401" />
+        <module name="microservice-seatea-storage-service-2002" />
+        <module name="microservice-seatea-order-service-2002" />
+        <module name="microservice-client-stream-rabbitmq-8803" />
+        <module name="microservice-client-stream-rabbitmq-8802" />
+        <module name="micorservice-config-client-3355" />
+        <module name="microservice-provider-payment-8002" />
+        <module name="micorservice-client-consul-order-80" />
+        <module name="micorservice-alibaba-config-nacos-client-3377" />
+        <module name="microservice-gateway-9529" />
+        <module name="microservice-provider-payment-hystrix-dashborad-9001" />
+        <module name="micorservice-eureka-server-7002" />
+        <module name="micorservice-eureka-server-7001" />
+        <module name="microservice-provider-hystrix-payment-8001" />
+        <module name="micorservice-config-center-service-3344" />
+        <module name="microservice-alibaba-client-nacos-order-84" />
+        <module name="micorservice-client-feign-order-80" />
+        <module name="microservice-alibaba-provider-payment-9001" />
+        <module name="microservice-alibaba-provider-payment-9004" />
+        <module name="microservice-alibaba-provider-payment-9003" />
+        <module name="microservice-api" />
+        <module name="microservice-alibaba-client-order-83" />
+        <module name="microservice-alibaba-provider-payment-9002" />
+        <module name="microservice-provider-stream-rabbitmq-8801" />
+        <module name="micorservice-config-client-3366" />
+        <module name="micorservice-client-order-80" />
+        <module name="microservice-provider-payment-8005" />
+        <module name="micorservice-zuul-gateway-server-9529" />
+        <module name="micorservice-provider-consul-payment-8006" />
+        <module name="microservice-provider-payment-8001" />
+        <module name="micorservice-client-zk-order-80" />
+        <module name="micorservice-client-feign-hyteix-order-80" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="micorservice-alibaba-config-nacos-client-3377" target="1.8" />
+      <module name="micorservice-client-consul-order-80" target="1.7" />
+      <module name="micorservice-client-feign-hyteix-order-80" target="1.8" />
+      <module name="micorservice-client-feign-order-80" target="1.8" />
+      <module name="micorservice-client-order-80" target="1.7" />
+      <module name="micorservice-client-zk-order-80" target="1.8" />
+      <module name="micorservice-config-center-service-3344" target="1.8" />
+      <module name="micorservice-config-client-3355" target="1.8" />
+      <module name="micorservice-config-client-3366" target="1.7" />
+      <module name="micorservice-eureka-server-7001" target="1.8" />
+      <module name="micorservice-eureka-server-7002" target="1.7" />
+      <module name="micorservice-provider-consul-payment-8006" target="1.8" />
+      <module name="micorservice-zuul-gateway-server-9529" target="1.7" />
+      <module name="microservice" target="1.8" />
+      <module name="microservice-alibaba-client-nacos-order-84" target="1.8" />
+      <module name="microservice-alibaba-client-order-83" target="1.8" />
+      <module name="microservice-alibaba-provider-payment-9001" target="1.8" />
+      <module name="microservice-alibaba-provider-payment-9002" target="1.8" />
+      <module name="microservice-alibaba-provider-payment-9003" target="1.8" />
+      <module name="microservice-alibaba-provider-payment-9004" target="1.8" />
+      <module name="microservice-alibaba-sentinel-service-8401" target="1.8" />
+      <module name="microservice-api" target="1.7" />
+      <module name="microservice-client-stream-rabbitmq-8802" target="1.7" />
+      <module name="microservice-client-stream-rabbitmq-8803" target="1.7" />
+      <module name="microservice-gateway-9529" target="1.8" />
+      <module name="microservice-provider-hystrix-payment-8001" target="1.8" />
+      <module name="microservice-provider-payment-8001" target="1.8" />
+      <module name="microservice-provider-payment-8002" target="1.7" />
+      <module name="microservice-provider-payment-8004" target="1.7" />
+      <module name="microservice-provider-payment-8005" target="1.8" />
+      <module name="microservice-provider-payment-hystrix-dashborad-9001" target="1.7" />
+      <module name="microservice-provider-stream-rabbitmq-8801" target="1.8" />
+      <module name="microservice-seatea-order-service-2001" target="1.8" />
+      <module name="microservice-seatea-order-service-2002" target="1.8" />
+      <module name="microservice-seatea-storage-service-2002" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

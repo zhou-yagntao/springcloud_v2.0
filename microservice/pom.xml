@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.chinaedu.springcloud</groupId>
+  <artifactId>microservice</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+  </dependencies>
+  <packaging>pom</packaging>
+
+  <modules>
+      <module>microservice-provider-payment-8001</module>
+      <module>microservice-api</module>
+      <module>micorservice-client-order-80</module>
+      <module>micorservice-eureka-server-7001</module>
+      <module>micorservice-eureka-server-7002</module>
+      <module>microservice-provider-payment-8002</module>
+      <module>micorservice-client-order-80</module>
+      <module>microservice-provider-payment-8005</module>
+      <module>micorservice-client-zk-order-80</module>
+      <module>micorservice-provider-consul-payment-8006</module>
+      <module>micorservice-client-consul-order-80</module>
+      <module>micorservice-client-feign-order-80</module>
+      <module>microservice-provider-hystrix-payment-8001</module>
+      <module>micorservice-client-feign-hyteix-order-80</module>
+      <module>microservice-provider-payment-hystrix-dashborad-9001</module>
+      <module>micorservice-zuul-gateway-server-9529</module>
+      <module>microservice-gateway-9529</module>
+      <module>micorservice-config-center-service-3344</module>
+      <module>micorservice-config-client-3355</module>
+      <module>micorservice-config-client-3366</module>
+      <module>microservice-provider-stream-rabbitmq-8801</module>
+      <module>microservice-client-stream-rabbitmq-8802</module>
+      <module>microservice-client-stream-rabbitmq-8803</module>
+      <module>microservice-alibaba-provider-payment-9001</module>
+      <module>microservice-alibaba-provider-payment-9002</module>
+      <module>microservice-alibaba-client-order-83</module>
+      <module>micorservice-alibaba-config-nacos-client-3377</module>
+      <module>microservice-alibaba-sentinel-service-8401</module>
+      <module>microservice-alibaba-provider-payment-9003</module>
+      <module>microservice-alibaba-provider-payment-9004</module>
+      <module>microservice-alibaba-client-nacos-order-84</module>
+      <module>microservice-seatea-order-service-2001</module>
+      <module>microservice-seatea-storage-service-2002</module>
+
+
+  </modules>
+  <name>microservice</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <!--统一管理jar包-->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <junit.version>4.12</junit.version>
+    <log4j.version>1.2.17</log4j.version>
+    <lombok.version>1.16.18</lombok.version>
+    <mysql.version>8.0.11</mysql.version>
+    <druid.version>1.1.16</druid.version>
+    <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
+  </properties>
+
+  <!--子模块继承之后，提供作用：锁定版本，子模块不需要在写groupId,version-->
+  <dependencyManagement>
+    <dependencies>
+      <!--测试依赖-->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <!--spring-boot坐标依赖 2.2.2.Realese-->
+      <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.2.2.RELEASE</version>
+        <type>pom</type>
+        <scope>provided</scope>
+      </dependency>
+      <!--springcloud坐标依赖  Hoxton.SR1版本 -->
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>Hoxton.SR1</version>
+        <type>pom</type>
+        <scope>runtime</scope>
+      </dependency>
+      <!--springcloud alibaba 2.2.0.RELEASE-->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>2.2.0.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--mysql坐标依赖-->
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
+      </dependency>
+       <!--druid-->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>${druid.version}</version>
+      </dependency>
+      <!--mybatis与springboot整合-->
+      <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot</artifactId>
+        <version>${mybatis.spring.boot.version}</version>
+      </dependency>
+      <!--lombok-->
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <fork>true</fork>
+                <addResources>true</addResources>
+            </configuration>
+        </plugin>
+
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

@@ -1,0 +1,18 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: nacos-payment-provider
+  #注册进服务中心
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848  #配置nacos地址
+
+#暴露监控内容
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

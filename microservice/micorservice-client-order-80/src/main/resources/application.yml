@@ -1,0 +1,22 @@
+server:
+  port: 80
+
+#服务名称
+spring:
+  application:
+    name: microservice-order-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1  #采样率，介于0~1之间
+
+#入驻
+eureka:
+  client:
+    register-with-eureka: true #表示入驻rureka
+    #register-with-eureka: false #表示不入驻rureka
+    fetch-registry: true #是否从Eureka上抓取已有的注册信息，默认为true，单节点无所谓，但是集群配置必须设为true才能配合ribbon实现负载均衡
+    service-url:
+      #defaultZone: http://localhost:7001/eureka  #入驻到服务注册
+      defaultZoone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  #入驻集群

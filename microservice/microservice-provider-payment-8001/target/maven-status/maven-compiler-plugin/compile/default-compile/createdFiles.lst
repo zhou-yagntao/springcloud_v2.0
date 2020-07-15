@@ -1,0 +1,6 @@
+com\chinaedu\springcloud\entity\Payment.class
+com\chinaedu\springcloud\dao\PaymentDao.class
+com\chinaedu\springcloud\service\PaymentService.class
+com\chinaedu\springcloud\PaymentMainApp.class
+com\chinaedu\springcloud\controller\PaymentController.class
+com\chinaedu\springcloud\service\impl\PaymentServiceImpl.class

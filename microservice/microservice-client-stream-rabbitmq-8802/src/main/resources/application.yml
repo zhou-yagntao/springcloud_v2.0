@@ -1,0 +1,35 @@
+#端口号
+server:
+  port: 8802
+
+spring:
+  application:
+    name: microservice-stream-client
+  cloud:
+    stream:
+      binders:  #在此处配置要绑定的 rabbitmq服务信息
+        defaultRabbit: #表示定义的名称，用于与binding整合
+          tyle: rabbit #消息组件类型
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+      bindings:  #服务的整合处理
+         input:  #这个名字是一个通道名称
+          description: studyExchange #表示要使用的Exchange名称
+          content-type: application/json #设置消息类型，本次为json，文本这设置为text/plain
+          binder: defaultRabbit  #设置绑定服务的具体位置
+          group: Justin01
+
+eureka:
+  client: #客户端进行Eureka资源的注册配置
+    service-url:
+      defaultZone: http://locahost:7001/Eureka
+  instance:
+    lease-renewal-interval-in-seconds: 2 #设置心跳间隔时间(默认30s)
+    lease-expiration-duration-in-seconds: 5 #如果现在超过了5s间隔(默认90s)
+    instance-id: receive-8802.com #在信息列表中显示的主机名称
+    prefer-ip-address: true #范围路径的ip地址
