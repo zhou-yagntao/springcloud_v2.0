@@ -1,0 +1,3 @@
+# springcloud_v2.0
+SpringCloud各类组件案例
+该部分案例代码是基于SpringCloud最新版本完成的案例，以及使用Springcloud Alibaba 部分组件完成替换spiengcloud部分组件而完成的案例
